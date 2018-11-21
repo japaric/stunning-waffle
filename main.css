@@ -193,12 +193,23 @@ a > span {
 figure {
     background-size: cover;
     background-position: 50%;
-    /* MAGIC to force the image to have a 4:3 aspect ratio */
+    /* NOTE force the image to have a 4:3 aspect ratio */
     padding-bottom: 75%;
     width: 100%;
 }
 
+.video {
+    position: relative;
+    width: 100%;
+    /* NOTE aspect ratio */
+    padding-bottom: 75%;
+}
+
 video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
 }
 
@@ -218,12 +229,14 @@ section > footer {
 @media only screen and (min-width: 900px) {
     figure {
         width: 50%;
-        /* aspect ratio setting */
+        /* NOTE aspect ratio */
         padding-bottom: 37.5%;
     }
 
-    video {
+    .video {
         width: 50%;
+        /* NOTE aspect ratio */
+        padding-bottom: 37.5%;
     }
 
     .vcenter {
